@@ -84,15 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(whatsappURL, '_blank');
     }
 
-    // Add click event to WhatsApp elements
-    const whatsappElements = document.querySelectorAll('[onclick*="wa.me"]');
-    whatsappElements.forEach(element => {
-        element.addEventListener('click', function(e) {
-            e.preventDefault();
-            openWhatsApp();
-        });
-    });
-
     // Service card hover effects
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
@@ -144,19 +135,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Loading animation
     window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
-        
         // Animate hero content
         const heroContent = document.querySelector('.hero-content');
         if (heroContent) {
-            heroContent.style.opacity = '0';
-            heroContent.style.transform = 'translateY(50px)';
-            
             setTimeout(() => {
-                heroContent.style.transition = 'all 1s ease';
-                heroContent.style.opacity = '1';
-                heroContent.style.transform = 'translateY(0)';
-            }, 300);
+                heroContent.classList.add('fade-in');
+                heroContent.classList.add('visible');
+            }, 100); // Small delay to ensure transition is applied
         }
     });
 

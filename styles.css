@@ -369,7 +369,12 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;}
 
-    .section-description  
+    .section-description {
+        max-width: 600px;
+        margin: 0 auto 3rem auto;
+        color: #4b5563;
+        font-size: 1.125rem;
+    }
 
 .faq {
     padding: 5rem 0;
