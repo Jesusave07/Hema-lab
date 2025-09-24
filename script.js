@@ -108,25 +108,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact card interactions
     const contactButtons = document.querySelectorAll('.contact-button');
     contactButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // You can add Google Maps integration here
-            alert('Funcionalidad de mapa próximamente disponible');
+        button.addEventListener('click', function(e) {
+            const mapUrl = e.target.dataset.mapUrl;
+            if (mapUrl) {
+                window.open(mapUrl, '_blank');
+            } else {
+                alert('Funcionalidad de mapa próximamente disponible');
+            }
         });
     });
 
     // Social media links
     const socialIcons = document.querySelectorAll('.social-icon, .footer-social-icon');
     socialIcons.forEach(icon => {
-        icon.addEventListener('click', function() {
-            // Check if it's WhatsApp or Instagram based on the SVG path
-            const svgPath = this.querySelector('path').getAttribute('d');
-            
-            if (svgPath.includes('M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z')) {
-                // WhatsApp icon
+        icon.addEventListener('click', function(e) {
+            const action = e.target.dataset.action;
+            if (action === 'whatsapp') {
                 openWhatsApp();
-            } else if (svgPath.includes('rect width="20" height="20"')) {
-                // Instagram icon
-                window.open('https://instagram.com/laboratorio_hemalab', '_blank');
+            } else if (action === 'instagram') {
+                window.open('https://www.instagram.com/laboratorio_hemalab?igsh=d2xjeGY5eTNmaGd6', '_blank');
             }
         });
     });
@@ -187,5 +187,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const currentlyActive = document.querySelector('.faq-item.active');
+            if (currentlyActive && currentlyActive !== item) {
+                currentlyActive.classList.remove('active');
+            }
+            item.classList.toggle('active');
+        });
     });
 });

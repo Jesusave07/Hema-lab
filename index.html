@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>HemaLab - Laboratorio de Diagnóstico Clínico</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,14 +28,8 @@
                 <!-- Social Icons & Mobile Menu -->
                 <div class="header-actions">
                     <div class="social-icons">
-                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="m16 11.37-4-4-4 4"></path>
-                            <path d="M21 16.5l-4-4-4 4"></path>
-                        </svg>
+                        <i class="fab fa-whatsapp social-icon" data-action="whatsapp"></i>
+                        <i class="fab fa-instagram social-icon" data-action="instagram"></i>
                     </div>
                     
                     <!-- Mobile Menu Button -->
@@ -53,14 +48,8 @@
                 <a href="#preguntas" class="nav-link-mobile">Preguntas Frecuentes</a>
                 <a href="#contacto" class="nav-link-mobile">Contacto</a>
                 <div class="mobile-social">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                        <path d="m16 11.37-4-4-4 4"></path>
-                        <path d="M21 16.5l-4-4-4 4"></path>
-                    </svg>
+                    <i class="fab fa-whatsapp social-icon" data-action="whatsapp"></i>
+                    <i class="fab fa-instagram social-icon" data-action="instagram"></i>
                 </div>
             </nav>
         </div>
@@ -85,76 +74,143 @@
             </div>
 
             <button class="cta-button" onclick="window.open('https://wa.me/584162760870', '_blank')">
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
+                <i class="fab fa-whatsapp cta-icon"></i>
                 <span>Agendar Cita por WhatsApp</span>
             </button>
         </div>
     </section>
-
-    <!-- Services Section -->
+    
+     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">NUESTROS SERVICIOS</p>
-                <h2 class="section-title">
-                    Un Laboratorio Completo para su Salud
-                </h2>
-                <p class="section-description">
-                    Ofrecemos una amplia variedad de análisis clínicos para cubrir todas sus necesidades de diagnóstico.
-                </p>
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Ofrecemos una amplia gama de análisis clínicos con la más alta calidad</p>
             </div>
-
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                            <path d="M8.5 8.5v.01"></path>
-                            <path d="M16 15.5v.01"></path>
-                            <path d="M12 12v.01"></path>
-                            <path d="M11 17v.01"></path>
-                            <path d="M7 14v.01"></path>
-                        </svg>
+                        <i class="fas fa-droplet"></i>
                     </div>
-                    <h3 class="service-title">Análisis de Sangre</h3>
-                    <p class="service-description">Perfiles hematológicos completos, química sanguínea, marcadores tumorales y más.</p>
+                    <h3 class="service-title">Hematología</h3>
+                    <p class="service-description">Análisis completos de sangre, conteo de células sanguíneas, coagulación y más estudios hematológicos especializados.</p>
+                    <ul class="service-features">
+                        <li>Hemograma completo</li>
+                        <li>Conteo de plaquetas</li>
+                        <li>Tiempos de coagulación</li>
+                        <li>Morfología celular</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 2v6h6V2"></path>
-                            <path d="M9 8H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2"></path>
-                            <circle cx="12" cy="14" r="2"></circle>
-                        </svg>
+                        <i class="fas fa-flask-vial"></i>
                     </div>
-                    <h3 class="service-title">Análisis de Orina</h3>
-                    <p class="service-description">Exámenes de orina completos para evaluar la función renal y detectar diversas patologías.</p>
+                    <h3 class="service-title">Bioquímica Clínica</h3>
+                    <p class="service-description">Determinaciones bioquímicas para evaluar el funcionamiento de órganos y sistemas metabólicos.</p>
+                    <ul class="service-features">
+                        <li>Perfil lipídico</li>
+                        <li>Glucosa y HbA1c</li>
+                        <li>Función renal y hepática</li>
+                        <li>Electrolitos</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
+                        <i class="fas fa-shield-virus"></i>
                     </div>
-                    <h3 class="service-title">Análisis Hormonales</h3>
-                    <p class="service-description">Evaluación de perfiles hormonales tiroideos, femeninos, masculinos y de fertilidad.</p>
+                    <h3 class="service-title">Microbiología</h3>
+                    <p class="service-description">Identificación de microorganismos patógenos y pruebas de sensibilidad antibiótica.</p>
+                    <ul class="service-features">
+                        <li>Cultivos bacterianos</li>
+                        <li>Antibiogramas</li>
+                        <li>Parasitología</li>
+                        <li>Micología clínica</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 2v6h6V2"></path>
-                            <path d="M9 8H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2"></path>
-                            <path d="M12 14v4"></path>
-                            <path d="M10 16h4"></path>
-                        </svg>
+                        <i class="fas fa-dna"></i>
                     </div>
-                    <h3 class="service-title">Pruebas Especiales</h3>
-                    <p class="service-description">Amplia gama de pruebas especializadas para diagnósticos más específicos y complejos.</p>
+                    <h3 class="service-title">Inmunología</h3>
+                    <p class="service-description">Análisis del sistema inmunológico y detección de marcadores específicos.</p>
+                    <ul class="service-features">
+                        <li>Marcadores tumorales</li>
+                        <li>Hormonas</li>
+                        <li>Serología</li>
+                        <li>Alergias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="sobre-nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Trayectoria</h2>
+                <p class="section-subtitle">15 años comprometidos con la excelencia y la salud de nuestros pacientes.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo de HemaLab">
+                </div>
+                <div class="about-text">
+                    <h3>Pasión por el Diagnóstico Preciso</h3>
+                    <p>Desde nuestra fundación, en Hema-Lab hemos mantenido un firme compromiso con la calidad y la innovación. Nuestro equipo está formado por profesionales altamente cualificados que comparten una misma visión: proporcionar resultados fiables que sirvan como una herramienta fundamental para el cuidado de la salud.</p>
+                    <p>Invertimos constantemente en tecnología de punta y en la formación continua de nuestro personal para garantizar que cada análisis cumpla con los más altos estándares de precisión y confiabilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="preguntas" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Resolvemos algunas de las dudas más comunes de nuestros pacientes.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Necesito estar en ayunas para todos los análisis?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No para todos. El ayuno es necesario para pruebas como glucosa, perfil lipídico y otras pruebas metabólicas. Para análisis como un hemograma completo, no siempre es requerido. Le recomendamos consultar con nosotros o su médico para las indicaciones específicas de su examen.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿En cuánto tiempo entregan los resultados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El tiempo de entrega varía según la complejidad del análisis. Los resultados de pruebas de rutina suelen estar disponibles el mismo día. Para estudios más especializados, el tiempo puede ser de 24 a 72 horas. Siempre le informaremos el tiempo estimado al momento de la toma de muestra.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Aceptan seguros médicos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Actualmente, operamos de forma privada para mantener nuestros precios competitivos y accesibles. Sin embargo, emitimos facturas detalladas que puede presentar a su compañía de seguros para solicitar un reembolso, según las condiciones de su póliza.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Necesito una cita previa?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si bien atendemos pacientes sin cita, recomendamos agendarla para minimizar su tiempo de espera y garantizar la disponibilidad de nuestro personal. Puede agendar fácilmente a través de nuestro número de WhatsApp.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,7 +240,7 @@
                         <h3 class="contact-title">Sede Principal</h3>
                     </div>
                     <p class="contact-address">Calle Principal de Campo de Oro, Casa 1-20.</p>
-                    <button class="contact-button">Ver en el Mapa</button>
+                    <button class="contact-button" data-map-url="https://maps.app.goo.gl/RrufJzxGV811DHH58">Ver en el Mapa</button>
                 </div>
 
                 <!-- Sede Santa Juana -->
@@ -197,7 +253,7 @@
                         <h3 class="contact-title">Sede Santa Juana</h3>
                     </div>
                     <p class="contact-address">Santa Juana, calle principal.</p>
-                    <button class="contact-button">Ver en el Mapa</button>
+                    <button class="contact-button" data-map-url="https://maps.app.goo.gl/Y5NU9qBQMy2iNPvdA">Ver en el Mapa</button>
                 </div>
 
                 <!-- Contact Information -->
@@ -217,34 +273,23 @@
                         </div>
 
                         <div class="contact-item">
-                            <svg class="contact-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <p class="contact-item-text">Teléfono: 0414-9778625</p>
+                            <i class="fas fa-phone-alt contact-item-icon"></i>
+                            <p class="contact-item-text"><a href="tel:04149778625">Teléfono: 0414-9778625</a></p>
                         </div>
 
                         <div class="contact-item">
-                            <svg class="contact-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                            <p class="contact-item-text">WhatsApp (Citas): 0416-2760870</p>
+                            <i class="fab fa-whatsapp contact-item-icon"></i>
+                            <p class="contact-item-text"><a href="https://wa.me/584162760870" target="_blank">WhatsApp (Citas): 0416-2760870</a></p>
                         </div>
 
                         <div class="contact-item">
-                            <svg class="contact-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <p class="contact-item-text">Hemalab23@gmail.com</p>
+                            <i class="fas fa-envelope contact-item-icon"></i>
+                            <p class="contact-item-text"><a href="mailto:Hemalab23@gmail.com">Hemalab23@gmail.com</a></p>
                         </div>
 
                         <div class="contact-item">
-                            <svg class="contact-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                                <path d="m16 11.37-4-4-4 4"></path>
-                                <path d="M21 16.5l-4-4-4 4"></path>
-                            </svg>
-                            <p class="contact-item-text">@laboratorio_hemalab</p>
+                            <i class="fab fa-instagram contact-item-icon"></i>
+                            <p class="contact-item-text"><a href="https://www.instagram.com/laboratorio_hemalab?igsh=d2xjeGY5eTNmaGd6" target="_blank">@laboratorio_hemalab</a></p>
                         </div>
                     </div>
                 </div>
@@ -281,14 +326,8 @@
                 <div class="footer-social">
                     <h4 class="footer-title">SÍGUENOS</h4>
                     <div class="footer-social-icons">
-                        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="m16 11.37-4-4-4 4"></path>
-                            <path d="M21 16.5l-4-4-4 4"></path>
-                        </svg>
-                        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
+                        <i class="fab fa-instagram footer-social-icon" data-action="instagram"></i>
+                        <i class="fab fa-whatsapp footer-social-icon" data-action="whatsapp"></i>
                     </div>
                     <p class="footer-email">Email: Hemalab23@gmail.com</p>
                 </div>

@@ -216,96 +216,165 @@ body {
     height: 24px;
 }
 
+.cta-icon.fab {
+    font-size: 24px;
+}
+
 /* Services Section */
 .services {
-    padding: 5rem 0;
-    background-color: #f9fafb;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-subtitle {
-    color: #0284c7;
-    font-weight: 600;
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.section-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.section-description {
-    font-size: 1.25rem;
-    color: #6b7280;
-    max-width: 48rem;
-    margin: 0 auto;
+    padding: 80px 0;
+    background-color: var(--background-light);
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 7xl;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .service-card {
-    background: white;
-    border-radius: 1rem;
+    background-color: var(--background-white);
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border-color);
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
 }
 
 .service-icon {
-    width: 4rem;
-    height: 4rem;
-    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-    border-radius: 1rem;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
+    margin: 0 auto 1.5rem;
 }
 
-.service-card:hover .service-icon {
-    background: linear-gradient(135deg, #bfdbfe, #93c5fd);
-}
-
-.service-icon svg {
-    width: 2rem;
-    height: 2rem;
-    color: #0284c7;
+.service-icon i {
+    font-size: 2rem;
+    color: var(--background-white);
 }
 
 .service-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
     margin-bottom: 1rem;
 }
 
 .service-description {
-    color: #6b7280;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
     line-height: 1.6;
 }
+
+.service-features {
+    list-style: none;
+    text-align: left;
+}
+
+.service-features li {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    color: var(--success-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* About Us Section */
+.about {
+    padding: 5rem 0;
+    background: #f9fafb;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-text h3 {
+    font-size: 1.75rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 5rem 0;
+    background: white;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid #e5e7eb;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed */
+    padding-bottom: 1.5rem;
+}
+
 
 /* Contact Section */
 .contact {
@@ -395,6 +464,11 @@ body {
 
 .contact-item-text {
     color: #374151;
+}
+
+.contact-item-text a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .contact-item-subtext {
@@ -522,6 +596,10 @@ body {
     }
 
     .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
         grid-template-columns: 1fr;
     }
 
