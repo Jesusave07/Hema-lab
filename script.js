@@ -160,35 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Email functionality
-    const emailElements = document.querySelectorAll('[href*="mailto"], .contact-item-text');
-    emailElements.forEach(element => {
-        if (element.textContent.includes('@')) {
-            element.style.cursor = 'pointer';
-            element.addEventListener('click', function() {
-                window.location.href = 'mailto:Hemalab23@gmail.com';
-            });
-        }
-    });
-
-    // Phone functionality
-    const phoneElements = document.querySelectorAll('.contact-item-text');
-    phoneElements.forEach(element => {
-        if (element.textContent.includes('Teléfono:') || element.textContent.includes('WhatsApp:')) {
-            element.style.cursor = 'pointer';
-            element.addEventListener('click', function() {
-                const phoneNumber = element.textContent.match(/\d{4}-\d{7}/);
-                if (phoneNumber) {
-                    if (element.textContent.includes('WhatsApp')) {
-                        openWhatsApp();
-                    } else {
-                        window.location.href = `tel:+58${phoneNumber[0].replace('-', '')}`;
-                    }
-                }
-            });
-        }
-    });
-
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
