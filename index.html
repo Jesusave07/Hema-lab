@@ -1,197 +1,483 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hema-Lab - Laboratorio de Diagnóstico Clínico</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hema-Lab - Laboratorio Clínico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header id="site-header" class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio">
-        <img src="assets/logo.jpg" alt="Hema-Lab logo" id="header-img" />
-        <span class="sr-only">Hema-Lab - Laboratorio de Diagnóstico Clínico</span>
-      </a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span>H</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Hema-Lab</h1>
+                        <p>Laboratorio Clínico</p>
+                    </div>
+                </div>
 
-      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Navegación principal">
-        <ul>
-          <li><a class="nav-link" href="#inicio">Inicio</a></li>
-          <li><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li><a class="nav-link whatsapp" href="https://wa.me/04162760870" target="_blank" rel="noopener">WhatsApp</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+                <nav class="nav desktop-nav">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#sedes" class="nav-link">Sedes</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </nav>
 
-  <main id="main" role="main">
-    <!-- Hero / Inicio -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#sedes" class="nav-link">Sedes</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
     <section id="inicio" class="hero">
-      <div class="container">
-        <h1>15 años de experiencia en diagnóstico clínico</h1>
-        <p class="lead">
-          Laboratorio clínico que prioriza la precisión y confiabilidad en cada examen.
-          Utilizamos tecnología de vanguardia y contamos con un equipo de expertos certificados.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="https://wa.me/04162760870" target="_blank" rel="noopener">Agendar Cita</a>
-          <a class="btn outline" href="#servicios">Ver Servicios</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hema-Lab
+                        <span class="gradient-text">Laboratorio Clínico</span>
+                    </h1>
+                    <p class="hero-description">
+                        15 años de experiencia ininterrumpida brindando precisión y confiabilidad en cada examen médico.
+                    </p>
+
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-dot"></div>
+                            <span>Análisis de sangre, orina y hormonas</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-dot"></div>
+                            <span>Tecnología de vanguardia</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-dot"></div>
+                            <span>Equipo de expertos certificados</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/584162760870" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Agendar Cita WhatsApp</span>
+                        </a>
+                        <a href="tel:+584149778625" class="btn btn-phone">
+                            <i class="fas fa-phone"></i>
+                            <span>Llamar Ahora</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Laboratorio clínico profesional">
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <ul class="highlights">
-          <li><strong>15+</strong> Años de experiencia</li>
-          <li><strong>2</strong> Sedes disponibles</li>
-          <li><strong>100%</strong> Precisión garantizada</li>
-        </ul>
-
-        <figure class="hero-image" aria-hidden="false">
-          <img src="assets/laboratorio-hero.jpg" alt="Equipo de laboratorio Hema-Lab" />
-          <figcaption>Laboratorio Hema-Lab</figcaption>
-        </figure>
-      </div>
     </section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="section services">
-      <div class="container">
-        <h2>Nuestros Servicios</h2>
-        <p>Ofrecemos una amplia gama de análisis clínicos con la más alta precisión y tecnología avanzada.</p>
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Sobre <span class="gradient-text">Nosotros</span>
+                </h2>
+                <p class="section-description">
+                    En Hema-Lab, nos dedicamos a brindar servicios de laboratorio clínico de la más alta calidad, 
+                    respaldados por años de experiencia y un compromiso inquebrantable con la excelencia médica.
+                </p>
+            </div>
 
-        <div class="service-list">
-          <article class="service">
-            <img src="assets/analisis-sangre.jpg" alt="Análisis de sangre" />
-            <h3>Análisis de Sangre</h3>
-            <p>Hematología completa, química sanguínea, perfil lipídico, glucemia y mucho más.</p>
-            <ul>
-              <li>Hemograma completo</li>
-              <li>Química sanguínea</li>
-              <li>Perfil lipídico</li>
-              <li>Glucemia</li>
-            </ul>
-          </article>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>15 Años de Experiencia</h3>
+                    <p>Experiencia ininterrumpida brindando servicios de laboratorio clínico con los más altos estándares de calidad.</p>
+                </div>
 
-          <article class="service">
-            <img src="assets/analisis-orina.jpg" alt="Análisis de orina" />
-            <h3>Análisis de Orina</h3>
-            <p>Examen general de orina, urocultivo y análisis especializados para diagnóstico temprano.</p>
-            <ul>
-              <li>Examen general de orina</li>
-              <li>Urocultivo</li>
-              <li>Sedimento urinario</li>
-              <li>Proteínas en orina</li>
-            </ul>
-          </article>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Precisión y Confiabilidad</h3>
+                    <p>Priorizamos la precisión en cada examen, garantizando resultados confiables para nuestros pacientes.</p>
+                </div>
 
-          <article class="service">
-            <img src="assets/analisis-hormonales.jpg" alt="Análisis hormonales" />
-            <h3>Análisis Hormonales</h3>
-            <p>Perfil hormonal completo: hormonas tiroideas, reproductivas y estudios especializados.</p>
-            <ul>
-              <li>Perfil tiroideo</li>
-              <li>Hormonas reproductivas</li>
-              <li>Cortisol y ACTH</li>
-              <li>Insulina</li>
-            </ul>
-          </article>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Tecnología de Vanguardia</h3>
+                    <p>Utilizamos equipos modernos y tecnología avanzada para ofrecer análisis clínicos de la más alta calidad.</p>
+                </div>
 
-          <article class="service">
-            <img src="assets/analisis-especializados.jpg" alt="Análisis especializados" />
-            <h3>Análisis Especializados</h3>
-            <p>Marcadores tumorales, inmunología, serología y otros estudios especializados.</p>
-            <ul>
-              <li>Marcadores tumorales</li>
-              <li>Serología</li>
-              <li>Inmunología</li>
-              <li>Microbiología</li>
-            </ul>
-          </article>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expertos Certificados</h3>
+                    <p>Nuestro equipo está conformado por profesionales altamente calificados y certificados en análisis clínicos.</p>
+                </div>
+            </div>
+
+            <div class="mission-card">
+                <h3>Nuestra Misión</h3>
+                <p>
+                    Proporcionar servicios de diagnóstico clínico con la máxima precisión y confiabilidad, 
+                    utilizando tecnología de vanguardia y el expertise de nuestros profesionales certificados, 
+                    para contribuir al bienestar y la salud de nuestra comunidad.
+                </p>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Sobre Nosotros -->
-    <section id="nosotros" class="section about">
-      <div class="container">
-        <h2>Sobre Hema-Lab</h2>
-        <p>Con más de 15 años de experiencia, Hema-Lab se ha consolidado como laboratorio de referencia,
-           comprometido con la excelencia en cada análisis.</p>
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Nuestros <span class="gradient-text">Servicios</span>
+                </h2>
+                <p class="section-description">
+                    Ofrecemos una amplia gama de análisis clínicos con tecnología de vanguardia 
+                    y los más altos estándares de calidad y precisión.
+                </p>
+            </div>
 
-        <div class="features">
-          <div class="feature">
-            <h4>Tecnología Avanzada</h4>
-            <p>Equipos de última generación para resultados precisos.</p>
-          </div>
-          <div class="feature">
-            <h4>Equipo Certificado</h4>
-            <p>Profesionales altamente capacitados y especializados.</p>
-          </div>
-          <div class="feature">
-            <h4>Atención Personalizada</h4>
-            <p>Servicio adaptado a las necesidades de cada paciente.</p>
-          </div>
-          <div class="feature">
-            <h4>Resultados Confiables</h4>
-            <p>Precisión y exactitud garantizada en cada análisis.</p>
-          </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon red">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Análisis de Sangre</h3>
+                    <p>Hemogramas completos, bioquímica sanguínea, perfiles lipídicos y más estudios especializados.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon yellow">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Análisis de Orina</h3>
+                    <p>Uroanálisis completo, cultivos de orina y estudios especializados del sistema urinario.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Estudios Hormonales</h3>
+                    <p>Perfil tiroideo, hormonas reproductivas, cortisol y estudios endocrinológicos completos.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon pink">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Perfil Cardiaco</h3>
+                    <p>Marcadores cardíacos, troponinas, CK-MB y estudios especializados del corazón.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Estudios Especiales</h3>
+                    <p>Marcadores tumorales, estudios inmunológicos y análisis especializados por patología.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon green">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Microbiología</h3>
+                    <p>Cultivos bacterianos, antibiogramas y estudios microbiológicos especializados.</p>
+                </div>
+            </div>
+
+            <div class="cta-card">
+                <p>¿Necesitas un análisis específico?</p>
+                <a href="https://wa.me/584162760870" target="_blank" class="btn btn-secondary">
+                    Consulta por WhatsApp
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section contact">
-      <div class="container">
-        <h2>Contacto y Ubicaciones</h2>
+    <!-- Locations Section -->
+    <section id="sedes" class="locations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Nuestras <span class="gradient-text">Sedes</span>
+                </h2>
+                <p class="section-description">
+                    Contamos con dos sedes estratégicamente ubicadas para brindarte mayor comodidad y acceso a nuestros servicios.
+                </p>
+            </div>
 
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Teléfono</h3>
-            <p><a href="tel:+584149778625">0414-9778625</a></p>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sede Campo de Oro">
+                        <div class="location-overlay">
+                            <h3>Sede Campo de Oro</h3>
+                        </div>
+                    </div>
+                    <div class="location-content">
+                        <div class="location-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Calle Principal de Campo de Oro, Casa 1-20</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/RrufJzxGV811DHH58" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Ver en Google Maps</span>
+                        </a>
+                    </div>
+                </div>
 
-            <h3>WhatsApp (Citas)</h3>
-            <p><a href="https://wa.me/04162760870" target="_blank" rel="noopener">0416-2760870</a></p>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sede Santa Juana">
+                        <div class="location-overlay">
+                            <h3>Sede Santa Juana</h3>
+                        </div>
+                    </div>
+                    <div class="location-content">
+                        <div class="location-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Santa Juana, calle principal</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/Y5NU9qBQMy2iNPvdA" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Ver en Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Email</h3>
-            <p><a href="mailto:Hemalab23@gmail.com">Hemalab23@gmail.com</a></p>
-
-            <h3>Instagram</h3>
-            <p><a href="https://www.instagram.com/laboratorio_hemalab" target="_blank" rel="noopener">@laboratorio_hemalab</a></p>
-          </div>
-
-          <div class="locations">
-            <h3>Horarios</h3>
-            <p>Lunes a Viernes 7:00 AM - 7:00 PM<br/>Sábados 7:00 AM - 2:00 PM</p>
-
-            <h3>Sede Campo de Oro</h3>
-            <p>Calle Principal de Campo de Oro, Casa 1-20<br/><a href="https://maps.app.goo.gl" target="_blank" rel="noopener">Ver en Google Maps</a></p>
-
-            <h3>Sede Santa Juana</h3>
-            <p>Santa Juana, calle principal<br/><a href="https://maps.app.goo.gl" target="_blank" rel="noopener">Ver en Google Maps</a></p>
-          </div>
+            <div class="schedule-card">
+                <div class="schedule-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Horarios de Atención</h3>
+                <div class="schedule-grid">
+                    <div class="schedule-item">
+                        <h4>Lunes a Viernes</h4>
+                        <p>7:00 a.m. - 7:00 p.m.</p>
+                    </div>
+                    <div class="schedule-item">
+                        <h4>Sábados</h4>
+                        <p>7:00 a.m. - 2:00 p.m.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
     </section>
-  </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© 2025 Hema-Lab. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Contáctanos</span>
+                </h2>
+                <p class="section-description">
+                    Estamos aquí para atenderte. Contáctanos a través de cualquiera de nuestros canales de comunicación.
+                </p>
+            </div>
 
-  <!-- Opcional: pequeño script para mejorar el comportamiento de enlaces ancla en móviles -->
-  <script>
-    // Ajusta el scroll para compensar header fijo en navegadores que no soportan scroll-margin-top en CSS
-    (function () {
-      var header = document.getElementById('site-header');
-      var headerHeight = header ? header.offsetHeight : 0;
-      // Añade scroll-margin-top a los targets
-      document.querySelectorAll('main section[id]').forEach(function (sec) {
-        sec.style.scrollMarginTop = (headerHeight + 12) + 'px';
-      });
-    })();
-  </script>
+            <div class="contact-content">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>WhatsApp - Citas</h3>
+                            <p>Agenda tu cita fácilmente</p>
+                        </div>
+                        <a href="https://wa.me/584162760870" target="_blank" class="btn btn-whatsapp">
+                            0416-2760870
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon phone">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Teléfono</h3>
+                            <p>Llámanos directamente</p>
+                        </div>
+                        <a href="tel:+584149778625" class="btn btn-phone">
+                            0414-9778625
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Instagram</h3>
+                            <p>Síguenos en redes sociales</p>
+                        </div>
+                        <a href="https://www.instagram.com/laboratorio_hemalab?igsh=d2xjeGY5eTNmaGd6" target="_blank" class="btn btn-instagram">
+                            @laboratorio_hemalab
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Correo Electrónico</h3>
+                            <p>Escríbenos un email</p>
+                        </div>
+                        <a href="mailto:Hemalab23@gmail.com" class="btn btn-email">
+                            Hemalab23@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Equipo médico profesional">
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Atención Rápida</h4>
+                            <p>Respuesta inmediata</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span>H</span>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Hema-Lab</h3>
+                            <p>Laboratorio Clínico</p>
+                        </div>
+                    </div>
+                    <p>
+                        15 años de experiencia ininterrumpida brindando precisión y confiabilidad 
+                        en análisis clínicos con tecnología de vanguardia.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Nuestros Servicios</h4>
+                    <ul>
+                        <li><div class="bullet"></div>Análisis de Sangre</li>
+                        <li><div class="bullet"></div>Análisis de Orina</li>
+                        <li><div class="bullet"></div>Estudios Hormonales</li>
+                        <li><div class="bullet"></div>Perfil Cardiaco</li>
+                        <li><div class="bullet"></div>Microbiología</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="footer-contacts">
+                        <a href="https://wa.me/584162760870" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>0416-2760870 (Citas)</span>
+                        </a>
+                        <a href="tel:+584149778625">
+                            <i class="fas fa-phone"></i>
+                            <span>0414-9778625</span>
+                        </a>
+                        <a href="mailto:Hemalab23@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>Hemalab23@gmail.com</span>
+                        </a>
+                        <a href="https://www.instagram.com/laboratorio_hemalab?igsh=d2xjeGY5eTNmaGd6" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>@laboratorio_hemalab</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <div class="schedule-info">
+                        <div class="schedule-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <p><strong>Lunes a Viernes</strong></p>
+                                <p>7:00 a.m. - 7:00 p.m.</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <p><strong>Sábados</strong></p>
+                                <p>7:00 a.m. - 2:00 p.m.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>Nuestras Sedes</h5>
+                    <div class="locations-info">
+                        <div class="location-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Campo de Oro, Casa 1-20</span>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santa Juana, calle principal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Hema-Lab Laboratorio Clínico. Todos los derechos reservados.</p>
+                <div class="social-buttons">
+                    <a href="https://wa.me/584162760870" target="_blank" class="social-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/laboratorio_hemalab?igsh=d2xjeGY5eTNmaGd6" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
