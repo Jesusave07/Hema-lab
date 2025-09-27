@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    setInterval(nextSlide, 7000); // Cambia de imagen cada 7 segundos
+    setInterval(nextSlide, 3000); // Cambia de imagen cada 3 segundos
 
     // Loading animation
     window.addEventListener('load', function() {
