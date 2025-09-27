@@ -122,16 +122,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        const rate = scrolled * -0.5;
-        
-        if (hero) {
-            hero.style.backgroundPosition = `center ${rate}px`;
+    // Hero Slideshow
+    const slides = document.querySelectorAll('.hero .slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+        // Quita la clase 'active' de la diapositiva actual
+        if (slides[currentSlide]) {
+            slides[currentSlide].classList.remove('active');
         }
-    });
+
+        // Avanza a la siguiente diapositiva
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        // Añade la clase 'active' a la nueva diapositiva
+        if (slides[currentSlide]) {
+            slides[currentSlide].classList.add('active');
+        }
+    }
+
+    setInterval(nextSlide, 7000); // Cambia de imagen cada 7 segundos
 
     // Loading animation
     window.addEventListener('load', function() {

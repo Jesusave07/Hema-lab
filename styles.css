@@ -56,7 +56,7 @@ body {
 }
 
 .logo-img {
-    height: 60px;
+    height: 100px;
     width: auto;
     object-fit: contain;
 }
@@ -64,7 +64,7 @@ body {
 .nav-desktop {
     display: flex;
     gap: 2rem;
-}
+} 
 
 .nav-link {
     text-decoration: none;
@@ -85,7 +85,7 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .social-icon {
@@ -155,17 +155,42 @@ body {
     padding-top: 0.75rem;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
     display: flex;
+    overflow: hidden; /* Oculta el exceso de la imagen al hacer zoom */
     align-items: center;
     justify-content: center;
-    background-image: url('https://ucontinental.edu.pe/carrera/assets/img/lab-clinico.webp');
+}
+
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.slide.active {
+    opacity: 1;
+    animation: kenburns 15s linear infinite;
+}
+
+@keyframes kenburns {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .hero-overlay {
@@ -173,6 +198,8 @@ body {
     inset: 0;
     background: linear-gradient(135deg, rgba(2, 132, 199, 0.8), rgba(14, 116, 144, 0.7));
 }
+
+
 
 .hero-content {
     position: relative;
@@ -240,6 +267,36 @@ body {
 
 .cta-icon.fab {
     font-size: 24px;
+}
+
+/* Scroll Down Arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: white;
+    font-size: 1.5rem;
+    animation: bounce 2.5s infinite;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-down-arrow:hover {
+    opacity: 1;
 }
 
 /* Services Section */
