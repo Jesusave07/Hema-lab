@@ -124,24 +124,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hero Slideshow
     const slides = document.querySelectorAll('.hero .slide');
+    const blinds = document.querySelector('.blinds-transition');
     let currentSlide = 0;
+    let isAnimating = false;
 
     function nextSlide() {
-        // Quita la clase 'active' de la diapositiva actual
-        if (slides[currentSlide]) {
+        if (isAnimating) return; // Prevent animation overlap
+        isAnimating = true;
+
+        // Trigger blinds animation
+        blinds.classList.add('active');
+
+        // Set delays for each blind
+        const blindElements = blinds.querySelectorAll('.blind');
+        blindElements.forEach((blind, i) => {
+            blind.style.animationDelay = `${i * 0.06}s`;
+        });
+
+        // Change the slide behind the animation
+        setTimeout(() => {
             slides[currentSlide].classList.remove('active');
-        }
-
-        // Avanza a la siguiente diapositiva
-        currentSlide = (currentSlide + 1) % slides.length;
-
-        // Añade la clase 'active' a la nueva diapositiva
-        if (slides[currentSlide]) {
+            currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-        }
+        }, 600); // Half of the animation duration
+
+        // Reset animation after it finishes
+        setTimeout(() => {
+            blinds.classList.remove('active');
+            blindElements.forEach(blind => blind.style.animationDelay = '0s');
+            isAnimating = false;
+        }, 1500); // A bit longer than the animation
     }
 
-    setInterval(nextSlide, 3000); // Cambia de imagen cada 3 segundos
+    setInterval(nextSlide, 5000); // Increased interval for the new animation
 
     // Loading animation
     window.addEventListener('load', function() {

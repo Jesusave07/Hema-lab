@@ -46,6 +46,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    /* Hacemos que el contenedor del header ocupe todo el ancho */
+    padding: 0 1rem;
 }
 
 .header-content {
@@ -53,6 +55,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    max-width: 1200px; /* Mantenemos el ancho máximo del contenido */
+    margin: 0 auto;
 }
 
 .logo-img {
@@ -185,23 +189,51 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     opacity: 0;
-    transform: scale(1.15); /* Start slightly more zoomed in */
-    transition: opacity 2.5s ease-in-out; /* Slower, smoother fade */
+    /* The transform is now handled by the kenburns animation */
+    transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
     opacity: 1;
-    /* The animation will now be applied continuously */
-    animation: kenburns 20s infinite;
+    /* Re-apply the continuous zoom animation */
+    animation: kenburns 20s linear infinite;
 }
 
+/* Blinds Transition Effect */
+.blinds-transition {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 2; /* On top of slides but below overlay */
+    pointer-events: none; /* Allow clicks to go through */
+}
+
+/* Re-add the kenburns animation */
 @keyframes kenburns {
     0% {
-        transform: scale(1.15);
-    }
-    100% {
         transform: scale(1);
     }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.blind {
+    flex-grow: 1;
+    background-color: var(--primary-color);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.blinds-transition.active .blind {
+    animation: reveal 1.2s ease-in-out forwards;
+}
+
+@keyframes reveal {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    45%  { transform: scaleY(1); transform-origin: top; }
+    55%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
 .hero-overlay {
