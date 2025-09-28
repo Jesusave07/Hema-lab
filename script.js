@@ -129,31 +129,41 @@ document.addEventListener('DOMContentLoaded', function() {
     let isAnimating = false;
 
     function nextSlide() {
-        if (isAnimating) return; // Prevent animation overlap
+        if (isAnimating || slides.length < 2) return;
         isAnimating = true;
+
+        const nextSlideIndex = (currentSlide + 1) % slides.length;
+        const currentSlideElement = slides[currentSlide];
+        const nextSlideElement = slides[nextSlideIndex];
+
+        // 1. Prepare the next slide by making it visible but keeping it underneath
+        nextSlideElement.style.zIndex = 1;
+        nextSlideElement.classList.add('active');
+
+        // 2. Place the current slide on top to hide the new one
+        currentSlideElement.style.zIndex = 2;
 
         // Trigger blinds animation
         blinds.classList.add('active');
-
-        // Set delays for each blind
         const blindElements = blinds.querySelectorAll('.blind');
         blindElements.forEach((blind, i) => {
             blind.style.animationDelay = `${i * 0.06}s`;
         });
 
-        // Change the slide behind the animation
+        // 3. After the blinds have closed (halfway through animation), hide the old slide
         setTimeout(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 600); // Half of the animation duration
+            currentSlideElement.classList.remove('active');
+        }, 600);
 
         // Reset animation after it finishes
         setTimeout(() => {
             blinds.classList.remove('active');
             blindElements.forEach(blind => blind.style.animationDelay = '0s');
+            // Reset z-index for the next cycle
+            slides.forEach(s => s.style.zIndex = '');
+            currentSlide = nextSlideIndex;
             isAnimating = false;
-        }, 1500); // A bit longer than the animation
+        }, 1500);
     }
 
     setInterval(nextSlide, 5000); // Increased interval for the new animation
